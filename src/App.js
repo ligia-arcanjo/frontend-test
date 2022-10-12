@@ -1,6 +1,12 @@
+import React from 'react';
+import Films from './pages/Films';
+import FilmsProvider from './context/FilmsProvider';
+
 function App() {
   return (
-    <div>Frontend test</div>
+    <FilmsProvider>
+      <Films />
+    </FilmsProvider>
   );
 }
 
