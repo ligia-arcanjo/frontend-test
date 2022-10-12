@@ -1,4 +1,4 @@
-async function getAllFilms() {
+async function fetchFilms() {
   const url = 'https://ghibliapi.herokuapp.com/films';
 
   try {
@@ -7,9 +7,9 @@ async function getAllFilms() {
 
     return data;
   } catch (error) {
-    // console.error(error.message);
-    return error.message;
+    console.error(error.message);
+    return {};
   }
 }
 
-export default getAllFilms;
+export default fetchFilms;
