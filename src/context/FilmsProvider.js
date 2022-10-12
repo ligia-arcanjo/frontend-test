@@ -6,6 +6,7 @@ import fetchFilms from '../services/apiGhibli';
 function FilmsProvider({ children }) {
   const [filmList, setFilmList] = useState([]);
   const [nameFilter, setNameFilter] = useState('');
+  const [orderDateFilter, setOrderDateFilter] = useState(false);
 
   useEffect(() => {
     fetchFilms().then((response) => {
@@ -15,9 +16,13 @@ function FilmsProvider({ children }) {
 
   const createNameFilter = (textValue) => setNameFilter(textValue);
 
+  const createOrderDateFilter = (checkboxValue) => setOrderDateFilter(checkboxValue);
+
   const contextValue = useMemo(() => (
-    { filmList, createNameFilter, nameFilter }
-  ), [filmList, nameFilter]);
+    {
+      filmList, createNameFilter, nameFilter, createOrderDateFilter, orderDateFilter,
+    }
+  ), [filmList, nameFilter, orderDateFilter]);
 
   return (
     <FilmsContext.Provider value={contextValue}>
