@@ -1,0 +1,23 @@
+.filters-container {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  font-size: 18px;
+  justify-content: space-around;
+}
+
+.filters-container input {
+  box-shadow: 0 0 0 0;
+  border-color: rgb(255, 194, 0);
+  border-left: 0 none;
+  border-right: 0 none;
+  border-top: 0 none;
+  font-size: 18px;
+  margin-left: 5px;
+  outline: 0;
+}
+
+.release-date-input input {
+  height: 18px;
+  width: 18px;
+}

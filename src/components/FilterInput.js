@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import FilmsContext from '../context/FilmsContext';
 
+import '../css/FilterInput.css';
+
 function FilterInput({ page }) {
   const {
     createNameFilter,
@@ -10,9 +12,9 @@ function FilterInput({ page }) {
   } = useContext(FilmsContext);
 
   return (
-    <div>
+    <div className="filters-container">
       <label htmlFor="search-name">
-        Search by name:
+        Search by name
         <input
           id="search-name"
           type="text"
@@ -24,7 +26,7 @@ function FilterInput({ page }) {
         page === 'films'
           && (
             <label htmlFor="search-director">
-              Search by director:
+              Search by director
               <input
                 id="search-director"
                 type="text"
@@ -37,8 +39,8 @@ function FilterInput({ page }) {
       {
         page === 'films'
         && (
-          <label htmlFor="release-date-input">
-            Order by release date:
+          <label htmlFor="release-date-input" className="release-date-input">
+            Order by release date
             <input
               id="release-date-input"
               type="checkbox"
