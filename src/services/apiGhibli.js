@@ -1,4 +1,4 @@
-async function fetchFilms() {
+export async function fetchFilms() {
   const url = 'https://ghibliapi.herokuapp.com/films';
 
   try {
@@ -12,4 +12,16 @@ async function fetchFilms() {
   }
 }
 
-export default fetchFilms;
+export async function fetchPeople() {
+  const url = 'https://ghibliapi.herokuapp.com/people';
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error(error.message);
+    return {};
+  }
+}
