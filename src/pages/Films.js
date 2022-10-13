@@ -39,7 +39,7 @@ function Films() {
     <>
       <Header />
 
-      <FilterInput />
+      <FilterInput page="films" />
 
       { renderFilms() }
     </>
