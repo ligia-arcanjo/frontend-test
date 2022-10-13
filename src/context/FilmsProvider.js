@@ -1,17 +1,22 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import FilmsContext from './FilmsContext';
-import fetchFilms from '../services/apiGhibli';
+import { fetchFilms, fetchPeople } from '../services/apiGhibli';
 
 function FilmsProvider({ children }) {
   const [filmList, setFilmList] = useState([]);
   const [nameFilter, setNameFilter] = useState('');
   const [directorFilter, setDirectorFilter] = useState('');
   const [orderDateFilter, setOrderDateFilter] = useState(false);
+  const [peopleList, setPeopleList] = useState([]);
 
   useEffect(() => {
     fetchFilms().then((response) => {
       setFilmList(response);
+    });
+
+    fetchPeople().then((response) => {
+      setPeopleList(response);
     });
   }, []);
 
@@ -30,8 +35,9 @@ function FilmsProvider({ children }) {
       orderDateFilter,
       createDirectorFilter,
       directorFilter,
+      peopleList,
     }
-  ), [filmList, nameFilter, orderDateFilter, directorFilter]);
+  ), [filmList, nameFilter, orderDateFilter, directorFilter, peopleList]);
 
   return (
     <FilmsContext.Provider value={contextValue}>
