@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import FilmsContext from '../context/FilmsContext';
 import CardFilm from '../components/CardFilm';
 import FilterInput from '../components/FilterInput';
+import Header from '../components/Header';
 
 function Films() {
   const {
@@ -36,13 +37,11 @@ function Films() {
 
   return (
     <>
-      <div>Films</div>
+      <Header />
 
       <FilterInput />
 
-      {
-        renderFilms()
-      }
+      { renderFilms() }
     </>
   );
 }
