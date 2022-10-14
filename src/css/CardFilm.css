@@ -1,0 +1,26 @@
+.card-film {
+  border-style: solid;
+  border-color: rgb(255, 194, 0);
+  border-radius: 20px;
+  height: 600px;
+  margin: 10px;
+  padding: 25px;
+  width: 600px;
+}
+
+.title-film {
+  color: rgb(129, 79, 244);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.description-film {
+  height: 160px;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}

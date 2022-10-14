@@ -4,6 +4,8 @@ import CardFilm from '../components/CardFilm';
 import FilterInput from '../components/FilterInput';
 import Header from '../components/Header';
 
+import '../css/Films.css';
+
 function Films() {
   const {
     filmList, nameFilter, directorFilter, orderDateFilter,
@@ -40,8 +42,9 @@ function Films() {
       <Header />
 
       <FilterInput page="films" />
-
-      { renderFilms() }
+      <div className="container-films">
+        { renderFilms() }
+      </div>
     </>
   );
 }
