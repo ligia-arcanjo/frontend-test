@@ -4,6 +4,8 @@ import FilterInput from '../components/FilterInput';
 import Header from '../components/Header';
 import FilmsContext from '../context/FilmsContext';
 
+import '../css/People.css';
+
 function People() {
   const { peopleList, nameFilter } = useContext(FilmsContext);
   let people = [...peopleList];
@@ -33,7 +35,9 @@ function People() {
 
       <FilterInput page="people" />
 
-      { renderPeople() }
+      <div className="container-people">
+        { renderPeople() }
+      </div>
     </>
   );
 }
