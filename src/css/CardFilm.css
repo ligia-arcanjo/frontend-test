@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .card-film {
   border-style: solid;
   border-color: rgb(255, 194, 0);

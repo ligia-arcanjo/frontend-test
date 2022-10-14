@@ -30,6 +30,7 @@ function Films() {
     return allFilms.map((film) => (
       <CardFilm
         key={film.id}
+        id={film.id}
         title={film.title}
         banner={film.movie_banner}
         description={film.description}
