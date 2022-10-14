@@ -8,7 +8,7 @@ function CardFilm({
   id, title, description, banner,
 }) {
   return (
-    <Link to={`/${id}`}>
+    <Link to={`/films/${id}`}>
       <div className="card-film">
         <p className="title-film">{title}</p>
         <p className="description-film">{description}</p>

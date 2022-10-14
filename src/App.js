@@ -9,9 +9,9 @@ function App() {
   return (
     <Switch>
       <Route exact path="/" component={Films} />
-      <Route exact path="/:id" component={FilmDetails} />
-      <Route exact path="/people" component={People} />
-      <Route exact path="/locations" component={Locations} />
+      <Route path="/films/:id" component={FilmDetails} />
+      <Route path="/people" component={People} />
+      <Route path="/locations" component={Locations} />
     </Switch>
   );
 }
