@@ -1,0 +1,24 @@
+.container-location {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.location-table {
+  width: 80%;
+}
+
+.location-table {
+  padding: 10px 0;
+}
+
+.location-table th {
+  background-color: rgba(255, 196, 0, 0.3);
+  border: 1px solid rgb(129, 79, 244);
+  padding: 10px 0;
+}
+
+.location-table td {
+  border: 1px solid rgb(129, 79, 244);
+  padding: 10px 0;
+}

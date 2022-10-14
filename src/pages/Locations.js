@@ -3,6 +3,8 @@ import Header from '../components/Header';
 import FilmsContext from '../context/FilmsContext';
 import FilterInput from '../components/FilterInput';
 
+import '../css/Locations.css';
+
 function Locations() {
   const { locationList, nameFilter } = useContext(FilmsContext);
   let locations = [...locationList];
@@ -28,21 +30,22 @@ function Locations() {
     <>
       <Header />
       <FilterInput />
+      <div className="container-location">
+        <table className="location-table">
+          <thead>
+            <tr>
+              <th>NAME</th>
+              <th>CLIMATE</th>
+              <th>TERRAIN</th>
+              <th>SURFACE WATER</th>
+            </tr>
+          </thead>
 
-      <table>
-        <thead>
-          <tr>
-            <th>name</th>
-            <th>climate</th>
-            <th>terrain</th>
-            <th>surface_water</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {renderLocationTable()}
-        </tbody>
-      </table>
+          <tbody>
+            {renderLocationTable()}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 }
