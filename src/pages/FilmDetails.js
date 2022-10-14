@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import { fetchFilmById } from '../services/apiGhibli';
 
+import '../css/FilmDetails.css';
+
 function FilmDetails({ match: { params: { id } } }) {
   const [filmInfo, setFilmInfo] = useState({});
 
@@ -16,13 +18,15 @@ function FilmDetails({ match: { params: { id } } }) {
     <>
       <Header />
       <div className="film-details-container">
-        <p>{filmInfo.title}</p>
-        <p>{`Original title: ${filmInfo.original_title_romanised}`}</p>
-        <p>{`Realease date: ${filmInfo.release_date}`}</p>
-        <span>{filmInfo.description}</span>
-        <p>{`Director: ${filmInfo.director}`}</p>
-        <p>{`Running time: ${filmInfo.running_time}'`}</p>
-        <img src={filmInfo.movie_banner} alt={`${filmInfo.title} movie banner`} />
+        <p className="title">{filmInfo.title}</p>
+        <div className="film-info-container">
+          <p>{`Original title: ${filmInfo.original_title_romanised}`}</p>
+          <p>{`Realease date: ${filmInfo.release_date}`}</p>
+          <span>{filmInfo.description}</span>
+          <p>{`Director: ${filmInfo.director}`}</p>
+          <p>{`Running time: ${filmInfo.running_time}'`}</p>
+          <img src={filmInfo.movie_banner} alt={`${filmInfo.title} movie banner`} />
+        </div>
       </div>
     </>
   );

@@ -1,0 +1,23 @@
+.film-details-container {
+  margin: 3% 15%;
+}
+
+.film-details-container .title {
+  background-color: rgba(255, 196, 0, 0.3);
+  border-radius: 50px;
+  color: rgb(129, 79, 244);
+  font-size: 22px;
+  margin: 5px 0;
+  padding: 15px;
+  text-align: center;
+}
+
+.film-info-container {
+  margin: 0 5%;
+}
+
+.film-info-container img {
+  border-radius: 50px;
+  height: auto;
+  width: 100%;
+}
